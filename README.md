@@ -1,15 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a NextJS learning project guided by [this youtube playlist](https://youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH)
 
-## Getting Started
+## Setting up NextJS codebase
 
-First, run the development server:
+Create next app
 
 ```bash
-npm run dev
-# or
+npx create-next-app <next-app-name>
+```
+
+Run this to start dev server
+
+```bash
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
