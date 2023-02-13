@@ -14,27 +14,59 @@ Run this to start dev server
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Understanding project folder structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### package.json
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- this file contains the dependancies of the project and the scripts required to build/start/dev/lint the project.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- dependancies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  - react and react-dom are used to build the UI
+  - lint is used to check lint issues and throw error(if any exists)
 
-## Learn More
+- scripts
 
-To learn more about Next.js, take a look at the following resources:
+  - next dev: this srcipt runs our next js application in development mode
+  - next build: this script is used to compile the application, making it ready for production deployment
+  - next start: this script is used to start the compiled application in production mode.
+    _Italic Text_
+    (Note: We do not have start script in react cuz it only handles UI and we only need to build the project but NextJS, being a full stack application, we may have to start our server as well and this helps us to do so.)
+    _Italic Text_
+  - next lint: this script is used to lint all the files in the application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### next.config.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- this is NextJS configuration file.
 
-## Deploy on Vercel
+### .eslintrc
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- this is the configuration file for eslint
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### .next
+
+- this folder gets generated when we run build/dev script
+- NextJS application is served from this folder
+
+### node_modules
+
+- this is folder in which all the dependancies are stored
+- this is generated when we run "yarn install" or "npm install"
+- this can be created even when we run dev script if we haven't already installed yarn/npm.
+  It internally installs dependencies if not present.
+
+### public
+
+- this folder holdsall the public resources used in the application
+- icons/images/svgs etc
+
+### pages
+
+- this folder alone is responsible for entire routing feature of the application
+- index.js: file will be served in browser in localhost:3000
+- \_app.js: we can define thr layout of our application in this file
+- api folder: is the folder where we create APIs for the application
+
+#### Execution flow
+
+package.json(yarn dev/npm dev) -> \_app.js -> index.js(Home component)
