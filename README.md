@@ -85,3 +85,5 @@ package.json(yarn dev/npm dev) -> \_app.js -> index.js(Home component)
 - by mixing and matching names with nested folder structure, it is possible to pretty much define most common routing patterns
 
 > File name in pages folder corresponds to the route itself.
+
+- check [productId].js file for dynamic routing.
