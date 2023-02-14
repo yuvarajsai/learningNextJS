@@ -30,9 +30,8 @@ yarn dev
   - next dev: this srcipt runs our next js application in development mode
   - next build: this script is used to compile the application, making it ready for production deployment
   - next start: this script is used to start the compiled application in production mode.
-    _Italic Text_
-    (Note: We do not have start script in react cuz it only handles UI and we only need to build the project but NextJS, being a full stack application, we may have to start our server as well and this helps us to do so.)
-    _Italic Text_
+    _(Note: We do not have start script in react cuz it only handles UI and we only need to build the project but NextJS, being a full stack application, we may have to start our server as well and this helps us to do so.)_
+
   - next lint: this script is used to lint all the files in the application
 
 ### next.config.js
@@ -70,3 +69,17 @@ yarn dev
 #### Execution flow
 
 package.json(yarn dev/npm dev) -> \_app.js -> index.js(Home component)
+
+## Routing
+
+### Routing in REACT
+
+- install a third party application
+- routes.js file to configure the routes
+- for each route, create a component file, export the component, import it in routes.js and configure new routse with _path_ property
+
+### NEXTJS approach to simplifying routing
+
+- file-system based routing mechanism
+- when a file is added in _pages folder_, it automatically becomes available as a route
+- by mixing and matching names with nested folder structure, it is possible to pretty much define most common routing patterns
