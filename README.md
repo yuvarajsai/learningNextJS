@@ -81,5 +81,7 @@ package.json(yarn dev/npm dev) -> \_app.js -> index.js(Home component)
 ### NEXTJS approach to simplifying routing
 
 - file-system based routing mechanism
-- when a file is added in _pages folder_, it automatically becomes available as a route
+- when a file is added in **pages folder**, it automatically becomes available as a route
 - by mixing and matching names with nested folder structure, it is possible to pretty much define most common routing patterns
+
+> File name in pages folder corresponds to the route itself.
