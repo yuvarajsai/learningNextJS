@@ -19,6 +19,8 @@ export default ProductDetails;
 
 // Also note, explicit routes are more preferred over dynamic routes
 
+// One more notable point for Nested dynamic routing is that we can even make folders using square brackets. [route-name]
+
 /*
 router: {
   "pathname": "/product/[productId]",
